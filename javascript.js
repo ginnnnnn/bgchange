@@ -11,6 +11,9 @@ function getRandomColor() {
   var color = '#';
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
+     // Math.floor(x) get anything x ==  int;exp 9.02 ==9 , -8.77 == 8 , Math.random() get value bt 0-1 
+     // Math.random() * 16 == 0. xx  --- 15.9999, Math.floor(Math.random() * 16) get 0 -15
+     // color = # + 6 times random  value from letters[i], string =#1 ==#1F === #1F4 ...
     	}
 
   return color;
@@ -25,8 +28,9 @@ function bgchange() {
 	+")";
 
 	 css.textContent = body.style.background + ";";
-
-}
+ // body.style.background == "linear-gradient(to riight, "+ first color "value" + ", " + second color"value"+")";
+ // exp. "linear-gradient(to right, #0FA12F, +#000FFF)"; 
+  }
 
 function change(){
 	var color3 =getRandomColor();
